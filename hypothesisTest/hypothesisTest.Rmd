@@ -19,6 +19,11 @@ b = 7:20
 t.test(a,b)
 ```
 
+### Shapiro-Wilk Test
+* test sample normality
+* Assumption: samll sample (N<50)
 
-
-
+```{r}
+shapiro.test(rnorm(100, mean = 5, sd = 3))
+shapiro.test(runif(100, min = 2, max = 4))
+```
