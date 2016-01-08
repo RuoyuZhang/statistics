@@ -28,6 +28,15 @@ shapiro.test(rnorm(100, mean = 5, sd = 3))
 shapiro.test(runif(100, min = 2, max = 4))
 ```
 
+### Chi square test
+* test sample normality
+* assumption: large sample size (N>30)
+```{r}
+library(fBasics)
+pchiTest(rnorm(500, mean = 5, sd = 3), title = NULL, description = NULL)
+pchiTest(runif(500, min = 2, max = 4), title = NULL, description = NULL)
+```
+
 
 ### Mann-Whitney test (Non-parametric test)
 * does not assume data is drawn from any particular distribution
