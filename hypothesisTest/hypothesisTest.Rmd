@@ -4,10 +4,21 @@ output: html_document
 ---
 
 ### T-test
+
+1. Two samples come from same population
+2. A sample is drawn from a probability distribution
+* Null hypothesis: $\mu$ = $\mu_{0}$
+* statistic: t 
+* assumption: Normal or almost normal distribution for sample
+* 1. Equal sample size? 2. Equal variance? for Welch t-test 
+
 ```{r}
 #t-test
-a=c(1,2,3)
-b=c(4,5,6)
+a = 1:10
+b = 7:20
 t.test(a,b)
 ```
+
+
+
 
