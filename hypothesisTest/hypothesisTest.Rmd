@@ -27,3 +27,29 @@ t.test(a,b)
 shapiro.test(rnorm(100, mean = 5, sd = 3))
 shapiro.test(runif(100, min = 2, max = 4))
 ```
+
+
+### Mann-Whitney test (Non-parametric test)
+* does not assume data is drawn from any particular distribution
+* Comparing the medians of two samples
+* "a non-parametric version of t-test"
+```{r}
+x <- c(0.80, 0.83, 1.89, 1.04, 1.45, 1.38, 1.91, 1.64, 0.73, 1.46)
+y <- c(1.15, 0.88, 0.90, 0.74, 1.21)
+wilcox.test(x, y, alternative = "g")        # greater
+wilcox.test(x, y, alternative = "greater", 
+            exact = FALSE, correct = FALSE) # H&W large sample #approximation
+```
+
+### Kolmogorov-Smirnov
+* compare whether two sample come from same distribution
+* qq plot can help visulization
+```{r}
+x <- rnorm(50)
+x2 <- rnorm(50, -1)
+plot(ecdf(x), xlim = range(c(x, x2)))
+plot(ecdf(x2), add = TRUE, lty = "dashed")
+t.test(x, x2, alternative = "g")
+wilcox.test(x, x2, alternative = "g")
+ks.test(x, x2, alternative = "l")
+```
