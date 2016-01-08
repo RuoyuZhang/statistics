@@ -3,6 +3,7 @@ title: "Hypothesis testing"
 output: html_document
 ---
 
+### T-test
 ```{r}
 #t-test
 a=c(1,2,3)
