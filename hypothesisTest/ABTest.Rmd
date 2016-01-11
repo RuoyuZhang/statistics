@@ -1,0 +1,17 @@
+---
+title: "AB test"
+output: html_document
+---
+
+##Test whether a change have significant effect
+* Control vs Trial
+* Online AB testing, more data, but maybe lower resolution
+
+##Example
+* Creates online finance courses
+* Customer funnel: large to small
+1. Hypothesis: Changing the "start now" button from orange to pink will increase how many students (click through probability) explore the courses
+2. Choose metric: 
+    + (Number of click)/(Number of page views): click-through-rate
+    + (Uniq visitors who click)/(Unique visitors to page): click-through probability
+
