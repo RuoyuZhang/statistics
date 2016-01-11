@@ -15,3 +15,15 @@ output: html_document
     + (Number of click)/(Number of page views): click-through-rate
     + (Uniq visitors who click)/(Unique visitors to page): click-through probability
 
+##Distributions:
+* Binomial distribution: 2 outcomes; iid
+* Confidence Interval: $N*\hat{p} > 5$ can assume normal dist; m = Z*SE; Z-score
+
+##Hypothesis Testing:
+p(results due to chance)
+* Null hypothesis:Pcontrol = Pexperiment
+* Alternative hypothesis: Pcont != Pexp
+* Reject Null hypothesis if P < 0.05
+
+##Size and Power:
+* Small sample: $\alpha$ is low, $\beta$ is high
